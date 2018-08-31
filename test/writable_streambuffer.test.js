@@ -9,14 +9,6 @@ describe('WritableStreamBuffer with defaults', function() {
     this.buffer = new streamBuffer.WritableStreamBuffer();
   });
 
-  it('returns false on call to getContents() when empty', function() {
-    expect(this.buffer.getContents()).to.be.false;
-  });
-
-  it('returns false on call to getContentsAsString() when empty', function() {
-    expect(this.buffer.getContentsAsString()).to.be.false;
-  });
-
   it('backing buffer should be default size', function() {
     expect(this.buffer.maxSize()).to.equal(streamBuffer.DEFAULT_INITIAL_SIZE);
   });
